@@ -16,16 +16,6 @@ interface Context {
   geo: GeoLocation;
 }
 
-interface ResponseData {
-  city?: string;
-  country?: string;
-  countryCode?: string;
-  region?: string;
-  latitude?: number;
-  longitude?: number;
-  timezone?: string;
-}
-
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (request: Request, context: Context): Promise<Response> => {
   // Get geolocation data from context
