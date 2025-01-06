@@ -32,15 +32,7 @@ export default async (request: Request, context: Context): Promise<Response> => 
   const geo = context.geo;
 
   // Create response object with geolocation data
-  const response: ResponseData = {
-    city: geo.city,
-    country: geo.country?.name,
-    countryCode: geo.country?.code,
-    region: geo.subdivision?.name,
-    latitude: geo.latitude,
-    longitude: geo.longitude,
-    timezone: geo.timezone,
-  };
+  const response = geo;
 
   return new Response(JSON.stringify(response), {
     headers: {
