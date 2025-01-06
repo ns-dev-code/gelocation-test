@@ -18,9 +18,9 @@ export default async (req: Request, context: Context) => {
         country: geo.country?.name || 'N/A',
         region: geo.subdivision?.name || 'N/A',
         city: geo.city || 'N/A',
-        latitude: geo.latitude || 'N/A',
-        longitude: geo.longitude || 'N/A',
-        postalCode: geo.postal?.code || 'N/A',
+        latitude: geo?.latitude || 'N/A',
+        longitude: geo?.longitude || 'N/A',
+        postalCode: geo?.postal?.code || 'N/A',
       }),
       {
         status: 200,
